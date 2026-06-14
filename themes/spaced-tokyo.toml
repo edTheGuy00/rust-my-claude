@@ -1,21 +1,20 @@
-# rust-my-claude — spaced-warm theme
-# Spaced pills (style: bubble): model · context · 5h · 7d, one line.
+# rust-my-claude — spaced-tokyo theme
+# Spaced pills (style: pl): model · context · 5h · 7d, one line.
 
 [style]
-separator = "diamond"
+separator = "powerline"
 default_fg = 231
 default_bg = 236
 gauge_red_shift = true
 gauge_red_threshold = 60
-cap_left = ""
-cap_right = ""
+powerline_divider = ""
 
 [model]
 line = 1
 order = 0
 icon = "✳"
 fg = 231
-bg = 124
+bg = 111
 
 [context]
 line = 1
@@ -23,8 +22,8 @@ order = 1
 icon = ""
 gauge = true
 fg = 231
-bg = 208
-track = 94
+bg = 111
+track = 60
 format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
 
 [limits]
@@ -32,5 +31,5 @@ line = 1
 order = 2
 gauge = true
 fg = 231
-bg = 166
-track = 160
+bg = 141
+track = 135

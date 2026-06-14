@@ -1,36 +1,36 @@
-# rust-my-claude — spaced-warm theme
-# Spaced pills (style: bubble): model · context · 5h · 7d, one line.
+# rust-my-claude — spaced-neon theme
+# Spaced pills (style: slant): model · context · 5h · 7d, one line.
 
 [style]
 separator = "diamond"
-default_fg = 231
+default_fg = 16
 default_bg = 236
 gauge_red_shift = true
 gauge_red_threshold = 60
-cap_left = ""
-cap_right = ""
+cap_left = ""
+cap_right = ""
 
 [model]
 line = 1
 order = 0
 icon = "✳"
-fg = 231
-bg = 124
+fg = 16
+bg = 201
 
 [context]
 line = 1
 order = 1
 icon = ""
 gauge = true
-fg = 231
-bg = 208
-track = 94
+fg = 16
+bg = 51
+track = 53
 format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
 
 [limits]
 line = 1
 order = 2
 gauge = true
-fg = 231
-bg = 166
-track = 160
+fg = 16
+bg = 226
+track = 220

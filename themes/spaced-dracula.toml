@@ -1,4 +1,4 @@
-# rust-my-claude — spaced-warm theme
+# rust-my-claude — spaced-dracula theme
 # Spaced pills (style: bubble): model · context · 5h · 7d, one line.
 
 [style]
@@ -15,7 +15,7 @@ line = 1
 order = 0
 icon = "✳"
 fg = 231
-bg = 124
+bg = 141
 
 [context]
 line = 1
@@ -23,8 +23,8 @@ order = 1
 icon = ""
 gauge = true
 fg = 231
-bg = 208
-track = 94
+bg = 141
+track = 54
 format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
 
 [limits]
@@ -32,5 +32,5 @@ line = 1
 order = 2
 gauge = true
 fg = 231
-bg = 166
-track = 160
+bg = 212
+track = 206

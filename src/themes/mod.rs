@@ -733,6 +733,106 @@ pub static THEMES: &[Theme] = &[
         description: "Spaced pills (diamond) in muted monochrome grey: model · context · 5h · 7d",
         toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-mono.toml")),
     },
+    Theme {
+        name: "spaced-dracula",
+        description: "Spaced pills (bubble): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-dracula.toml")),
+    },
+    Theme {
+        name: "spaced-gruvbox",
+        description: "Spaced pills (slant): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-gruvbox.toml")),
+    },
+    Theme {
+        name: "spaced-nord",
+        description: "Spaced pills (flame): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-nord.toml")),
+    },
+    Theme {
+        name: "spaced-tokyo",
+        description: "Spaced pills (pl): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-tokyo.toml")),
+    },
+    Theme {
+        name: "spaced-catppuccin",
+        description: "Spaced pills (plslant): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-catppuccin.toml")),
+    },
+    Theme {
+        name: "spaced-monokai",
+        description: "Spaced pills (plflame): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-monokai.toml")),
+    },
+    Theme {
+        name: "spaced-onedark",
+        description: "Spaced pills (round): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-onedark.toml")),
+    },
+    Theme {
+        name: "spaced-rosepine",
+        description: "Spaced pills (plain): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-rosepine.toml")),
+    },
+    Theme {
+        name: "spaced-cobalt",
+        description: "Spaced pills (bubble): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-cobalt.toml")),
+    },
+    Theme {
+        name: "spaced-nightowl",
+        description: "Spaced pills (slant): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-nightowl.toml")),
+    },
+    Theme {
+        name: "spaced-blueowl",
+        description: "Spaced pills (flame): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-blueowl.toml")),
+    },
+    Theme {
+        name: "spaced-atomic",
+        description: "Spaced pills (pl): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-atomic.toml")),
+    },
+    Theme {
+        name: "spaced-m365",
+        description: "Spaced pills (plslant): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-m365.toml")),
+    },
+    Theme {
+        name: "spaced-unicorn",
+        description: "Spaced pills (plflame): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-unicorn.toml")),
+    },
+    Theme {
+        name: "spaced-material",
+        description: "Spaced pills (round): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-material.toml")),
+    },
+    Theme {
+        name: "spaced-solarized",
+        description: "Spaced pills (plain): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-solarized.toml")),
+    },
+    Theme {
+        name: "spaced-forest",
+        description: "Spaced pills (bubble): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-forest.toml")),
+    },
+    Theme {
+        name: "spaced-neon",
+        description: "Spaced pills (slant): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-neon.toml")),
+    },
+    Theme {
+        name: "spaced-ember",
+        description: "Spaced pills (flame): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-ember.toml")),
+    },
+    Theme {
+        name: "spaced-latte",
+        description: "Spaced pills (pl): model · context(tokens) · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-latte.toml")),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).
