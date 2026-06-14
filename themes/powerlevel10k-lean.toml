@@ -1,0 +1,42 @@
+# rust-my-claude — powerlevel10k-lean theme
+# Pure plain/transparent style, no backgrounds. Cyan path, yellow git,
+# green prompt arrow. Minimalist and terminal-background-agnostic.
+
+[style]
+separator           = "plain"
+default_fg          = 231
+
+# ── LINE 1: location & identity ─────────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 81
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 37
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 220
+
+# ── LINE 2: budgets & cost ───────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 81
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 220
+format = "{cost:.4} · {duration}"

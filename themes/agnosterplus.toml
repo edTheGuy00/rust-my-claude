@@ -1,0 +1,64 @@
+# rust-my-claude — agnosterplus theme
+# Powerline style, clean three-segment look: white session, sky-blue path,
+# mint-green git — all on near-black text with classic powerline arrows.
+
+[style]
+separator           = "powerline"
+default_fg          = 235
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 235
+bg    = 117
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 235
+bg    = 231
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 235
+bg    = 121
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 235
+bg    = 248
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 235
+bg     = 32
+track  = 17
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 235
+bg     = 117
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,55 @@
+# rust-my-claude — tokyonight-storm theme
+# Tokyo Night Storm: deep navy background (#24283b), plain/transparent style with
+# purple directory, sky-blue git, green model — minimal no-bg prompt aesthetic.
+
+[style]
+separator           = "plain"
+default_fg          = 146
+gauge_red_shift     = true
+gauge_red_threshold = 60
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 141   # terminal-magenta #bb9af7
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 149   # pistachio-green #9ece6a
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 117   # light-sky-blue #7dcfff
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 111   # terminal-blue #7aa2f7
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 141
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 179   # terminal-yellow #e0af68
+format = "{cost:.4} · {duration}"

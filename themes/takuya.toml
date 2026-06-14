@@ -1,0 +1,66 @@
+# rust-my-claude — takuya theme
+# Takuya: diamond style with rounded caps, deep-blue directory segment, dark-grey
+# model/git blocks with powerline right-fill dividers, bright-yellow git, near-black fg.
+
+[style]
+separator           = "diamond"
+default_fg          = 254
+default_bg          = 235
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 254   # #E4E4E4
+bg    = 238   # #444444 dark grey
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 235   # near-black #011627
+bg    = 31    # #0077c2 deep blue
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 235   # near-black
+bg    = 227   # #FFFB38 yellow (clean state; dynamic colours still override)
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 254
+bg    = 238
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 235
+bg     = 31
+track  = 17
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 235
+bg     = 44    # #21c7c7 teal
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,55 @@
+# rust-my-claude — the-unnamed theme
+# The Unnamed: plain/transparent style with teal path, hot-pink git, blue model,
+# mint/yellow accents — bold neon colours on a dark terminal background.
+
+[style]
+separator           = "plain"
+default_fg          = 253
+gauge_red_shift     = true
+gauge_red_threshold = 60
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 44    # #15C2CB teal
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 75    # #5EADF2 blue
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 205   # #F141A8 hot-pink
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 86    # #44FFD2 mint
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 44
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 221   # #FFE45E yellow
+format = "{cost:.4} · {duration}"

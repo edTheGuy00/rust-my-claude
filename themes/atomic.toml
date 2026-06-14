@@ -1,0 +1,78 @@
+# rust-my-claude — atomic theme
+# Diamond style with rounded left/right caps; vivid palette of cobalt blue,
+# orange, and yellow on dark backgrounds with teal accent on line 2.
+# Inspired by the atomic omp theme's left-to-right colourful diamond segments.
+
+# Colour mapping:
+#   #0077c2 → R=0 G=135(idx2) B=175(idx3) → 16+0+12+3 = 31  (cobalt blue)
+#   #FF9248 → R=255(idx5) G=135(idx2) B=55→95(idx1) → 16+180+12+1 = 209 (orange)
+#   #FFFB38 → R=255(idx5) G=255(idx5) B=35→0(idx0)  → 16+180+30+0 = 226 (yellow)
+#   #2d3436 → near-black grey → 236
+#   #011627 → very dark → 233
+#   #21c7c7 → teal → R=0 G=175(idx3) B=175(idx3) → 16+0+18+3 = 37  (teal)
+#   #40c4ff → light cyan → R=55(idx1) G=175(idx3) B=255(idx5) → 16+36+18+5 = 75
+#   #83769c → muted purple → R=135(idx2) G=95(idx1) B=135(idx2) → 16+72+6+2 = 96
+#   #303030 → dark grey → 236
+#   #ef5350 → red → R=215(idx4) G=95(idx1) B=95(idx1) → 16+144+6+1 = 167
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 236
+bg    = 209
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 31
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 233
+bg    = 226
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 231
+bg    = 96
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 233
+bg     = 37
+track  = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 231
+bg     = 75
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,42 @@
+# rust-my-claude — agnoster-minimal theme
+# Plain/transparent style inspired by agnoster.minimal: VS Code blue (#007ACC)
+# as the sole accent on transparent backgrounds, white text, no fill segments.
+
+[style]
+separator           = "plain"
+default_fg          = 231
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 32
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 74
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 231
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 32
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 74
+format = "{cost:.4} · {duration}"

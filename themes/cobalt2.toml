@@ -1,0 +1,77 @@
+# rust-my-claude — cobalt2 theme
+# Diamond style with rounded caps; the cobalt2 palette of deep cobalt blue,
+# electric green, and golden yellow on a near-black background.
+# Faithful to Wes Bos's cobalt2 colour scheme.
+
+# Colour mapping:
+#   #1478DB → R=0 G=95(idx1) B=215(idx4) → 16+0+6+4 = 26   (cobalt blue)
+#   #3AD900 → R=55→0(idx0) G=215(idx4) B=0(idx0) → 16+0+24+0 = 40  (electric green)
+#             Actually R=0x3A=58→55→idx1, G=0xD9=217→215→idx4, B=0
+#             → 16+36+24+0 = 76  (bright green)
+#   #FFC600 → R=255(idx5) G=175(idx3)→actually 0xC6=198→215(idx4) B=0(idx0)
+#             → 16+180+24+0 = 220 (golden yellow)
+#   #000000 → 16 (or 232 near-black)
+#   #B388FF → R=175(idx3) G=135(idx2) B=255(idx5) → 16+108+12+5 = 141 (lilac)
+#   #FF6F00 → R=255(idx5) G=95(idx1) B=0(idx0) → 16+180+6+0 = 202  (amber)
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 234
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 232
+bg    = 26
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 232
+bg    = 76
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 232
+bg    = 220
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 231
+bg    = 237
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 232
+bg     = 26
+track  = 18
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 232
+bg     = 141
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,40 @@
+# rust-my-claude — ys theme
+# Terminal-native plain style: no backgrounds, colour-coded text only.
+# Cyan directory, white model, teal git, yellow cost — clean monochrome feel.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 117
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 51
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 229
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 229
+format = "{cost:.4} · {duration}"

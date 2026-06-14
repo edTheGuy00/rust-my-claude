@@ -1,0 +1,50 @@
+# rust-my-claude — spaceship theme
+# Plain/transparent style with no backgrounds; colour-coded icons on a dark
+# terminal. Cyan directory, pink git branch, light-yellow session, green prompt
+# arrow — faithful to the spaceship-prompt aesthetic.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+default_bg          = 0
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 38
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 218
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 176
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 245
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 120
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 229
+format = "{cost:.4} · {duration}"

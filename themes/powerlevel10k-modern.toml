@@ -1,0 +1,66 @@
+# rust-my-claude — powerlevel10k-modern theme
+# Round diamond bubbles with rightward-pointing powerline symbol (E0B4).
+# White OS bubble, vivid blue path, lime-yellow git; plain green prompt arrow.
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: location & identity ─────────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 21
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 16
+bg    = 116
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 16
+bg    = 185
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 231
+bg    = 236
+
+# ── LINE 2: budgets & cost ───────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 16
+bg     = 116
+track  = 73
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 16
+bg     = 185
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,64 @@
+# rust-my-claude — plague theme
+# Dark powerline with red path, yellow git, and teal status; rounded diamond caps.
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1 ─────────────────────────────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 16
+bg    = 196
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 17
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 17
+bg    = 226
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 231
+bg    = 236
+
+# ── LINE 2 ─────────────────────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 37
+track  = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 16
+bg     = 41
+format = "{cost:.4} · {duration}"

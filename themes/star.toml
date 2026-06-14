@@ -1,0 +1,51 @@
+# rust-my-claude — star theme
+# Plain style; One Dark-inspired palette with teal path, purple git, coral/pink accents.
+# Palette: teal #55B9C4, purple #C678DD, coral #E06C75, green #98C379.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 74
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 176
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 176
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 241
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 74
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 108
+format = "{cost:.4} · {duration}"

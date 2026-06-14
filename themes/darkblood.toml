@@ -1,0 +1,42 @@
+# rust-my-claude — darkblood theme
+# Plain/transparent style: white text with burnt-orange (#CB4B16 → 166) accents,
+# box-drawing bracket decoration, no backgrounds.
+
+[style]
+separator           = "plain"
+default_fg          = 231
+
+# ── LINE 1 ─────────────────────────────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 166
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 166
+
+# ── LINE 2 ─────────────────────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 166
+format = "{cost:.4} · {duration}"

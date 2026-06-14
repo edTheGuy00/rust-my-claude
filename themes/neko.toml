@@ -1,0 +1,47 @@
+# rust-my-claude — neko theme
+# Playful kawaii cat theme: plain/transparent, emoji accent, warm orange + teal + pink palette.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 73
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 176
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 74
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 167
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 208
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 23
+format = "{cost:.4} · {duration}"

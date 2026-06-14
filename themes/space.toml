@@ -1,0 +1,55 @@
+# rust-my-claude — space theme
+# Space: plain/transparent style with cyan username accent, light-green directory,
+# violet model, sky-blue git — spacey minimal prompt with warm amber cost line.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+gauge_red_shift     = true
+gauge_red_threshold = 60
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 119   # lightGreen
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 99    # #906cff violet
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 117   # #7FD5EA sky-blue
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 44    # #26C6DA cyan
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 99
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 221   # #FFD54F amber
+format = "{cost:.4} · {duration}"

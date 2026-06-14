@@ -1,0 +1,63 @@
+# rust-my-claude — wholespace theme
+# Warm cream/white background with dark navy text, blue (#516BEB) model accent
+# and teal-green git; diamond style with left-pointing caps (reversed-arrow look).
+
+[style]
+separator           = "diamond"
+default_fg          = 16
+default_bg          = 231
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 16
+bg    = 231
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 63
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 16
+bg    = 43
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 16
+bg    = 195
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 63
+track  = 17
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 16
+bg     = 43
+format = "{cost:.4} · {duration}"

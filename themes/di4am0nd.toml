@@ -1,0 +1,46 @@
+# rust-my-claude — di4am0nd theme
+# Plain/transparent, gold + cyan + red palette. Minimal, no backgrounds.
+# Inspired by di4am0nd.omp.json: gold session, cyan path, red/white git.
+
+[style]
+separator  = "plain"
+default_fg = 252
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 45
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 214
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 196
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 108
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 45
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 214
+format = "{cost:.4} · {duration}"

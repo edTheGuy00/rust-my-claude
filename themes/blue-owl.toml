@@ -1,0 +1,66 @@
+# rust-my-claude — blue-owl theme
+# Powerline style with deep navy/cobalt backgrounds and vivid green/yellow git
+# state indicators; dark session panel on the right.
+
+[style]
+separator           = "powerline"
+default_fg          = 231
+default_bg          = 23
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 24
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 23
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 16
+# bg is dynamic: clean=41, staged=221, dirty=221, ahead=141
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 80
+bg    = 23
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 24
+track  = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 231
+bg     = 23
+format = "{cost:.4} · {duration}"

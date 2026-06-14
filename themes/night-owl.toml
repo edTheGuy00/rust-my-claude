@@ -1,0 +1,80 @@
+# rust-my-claude — night-owl theme
+# Powerline style with the Night Owl palette: periwinkle blue directory,
+# lime-green git, teal accent on line 2, all on a near-black (#011627) background.
+# Matches Sarah Drasner's night-owl colour scheme.
+
+# Colour mapping:
+#   #011627 → very dark blue-black → 233
+#   #82AAFF → R=135(idx2) G=175(idx3) B=255(idx5) → 16+72+18+5 = 111 (periwinkle)
+#   #addb67 → R=175(idx3) G=215(idx4) B=95(idx1)  → 16+108+24+1 = 149 (lime green)
+#   #21c7a8 → R=0(idx0) G=175(idx3) B=175(idx3)   → 16+0+18+3 = 37   (teal)
+#   #d6deeb → R=215(idx4) G=215(idx4) B=215(idx4) → 16+144+24+4 = 188 (light grey-blue)
+#             Actually #d6deeb: R=0xD6=214→215, G=0xDE=222→215, B=0xEB=235→215
+#             → 16+144+24+4 = 188
+#   #C792EA → R=175(idx3) G=95(idx1) B=215(idx4)  → 16+108+6+4 = 134  (lavender)
+#   #e4cf6a → R=215(idx4) G=215(idx4) B=95(idx1)  → 16+144+24+1 = 185  (warm yellow)
+#   #575656 → dark grey → 240
+#   #8f43f3 → R=135(idx2) G=55→95(idx1) B=255(idx5) → 16+72+6+5 = 99   (purple)
+
+[style]
+separator           = "powerline"
+default_fg          = 233
+default_bg          = 233
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 233
+bg    = 111
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 233
+bg    = 149
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 233
+bg    = 185
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 188
+bg    = 240
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 233
+bg     = 37
+track  = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 233
+bg     = 99
+format = "{cost:.4} · {duration}"

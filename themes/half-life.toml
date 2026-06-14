@@ -1,0 +1,41 @@
+# rust-my-claude — half-life theme
+# Plain style: electric green path, cyan git, purple username, orange lambda prompt.
+
+[style]
+separator           = "plain"
+default_fg          = 231
+
+# ── LINE 1 ─────────────────────────────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 118
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 97
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 81
+
+# ── LINE 2 ─────────────────────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 81
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 166
+format = "{cost:.4} · {duration}"

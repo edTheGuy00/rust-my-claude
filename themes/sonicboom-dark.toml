@@ -1,0 +1,52 @@
+# rust-my-claude — sonicboom-dark theme
+# Pitch-black base with cyan (#43CCEA) accent and bright-green git;
+# plain/transparent style segments on dark bg — minimal powerline feel.
+
+[style]
+separator           = "plain"
+default_fg          = 231
+default_bg          = 235
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 80
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 80
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 46
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 250
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 80
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 196
+format = "{cost:.4} · {duration}"

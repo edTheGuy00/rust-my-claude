@@ -1,0 +1,52 @@
+# rust-my-claude — tokyo theme
+# Dark sci-fi theme: Tokyo Night-adjacent palette with steel-blue box-drawing
+# outlines, purple/pink accents, orange highlights. Plain style matching the
+# OMP theme's transparent outline aesthetic (no filled backgrounds).
+
+[style]
+separator           = "plain"
+default_fg          = 110
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 146
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 218
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 110
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 110
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 203
+format = "{cost:.4} · {duration}"

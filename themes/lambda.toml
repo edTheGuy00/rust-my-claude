@@ -1,0 +1,40 @@
+# rust-my-claude — lambda theme
+# Minimal plain style: bold red path and git, near-white default text, lambda aesthetic.
+# Palette: deep red #B80101, off-white #F5F5F5 on transparent background.
+
+[style]
+separator           = "plain"
+default_fg          = 254
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 124
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 254
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 124
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 124
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 254
+format = "{cost:.4} · {duration}"
