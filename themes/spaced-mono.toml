@@ -1,0 +1,36 @@
+# rust-my-claude — spaced-mono theme
+# Four floating pills (model · context · 5h · 7d) in a muted monochrome grey.
+
+[style]
+separator           = "diamond"
+default_fg          = 252
+default_bg          = 238
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+[model]
+line  = 1
+order = 0
+icon  = "✳"
+fg    = 252
+bg    = 240
+
+[context]
+line   = 1
+order  = 1
+icon   = ""
+gauge  = true
+fg     = 252
+bg     = 245
+track  = 236
+format = "{pct:.0}%"
+
+[limits]
+line  = 1
+order = 2
+gauge = true
+fg    = 252
+bg    = 242
+track = 236

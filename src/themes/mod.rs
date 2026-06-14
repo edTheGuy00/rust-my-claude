@@ -713,6 +713,26 @@ pub static THEMES: &[Theme] = &[
         description: "ys one-line (minimal): git, context",
         toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/ys-1l.toml")),
     },
+    Theme {
+        name: "spaced",
+        description: "Spaced pills (diamond): model · context · 5h · 7d, one line",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced.toml")),
+    },
+    Theme {
+        name: "spaced-warm",
+        description: "Spaced pills (diamond) in a warm ember palette: model · context · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-warm.toml")),
+    },
+    Theme {
+        name: "spaced-cool",
+        description: "Spaced pills (diamond) in a cool teal/blue palette: model · context · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-cool.toml")),
+    },
+    Theme {
+        name: "spaced-mono",
+        description: "Spaced pills (diamond) in muted monochrome grey: model · context · 5h · 7d",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-mono.toml")),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).
