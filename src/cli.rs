@@ -41,7 +41,7 @@ pub fn is_subcommand(s: &str) -> bool {
 pub fn run(args: &[String]) -> i32 {
     let cmd = args.first().map(String::as_str).unwrap_or("help");
     match cmd {
-        "init" | "setup" => cmd_init(),
+        "init" | "setup" => cmd_init(&args[1..]),
         "theme" => cmd_theme(&args[1..]),
         "config" => cmd_config(&args[1..]),
         "--version" | "version" => {
@@ -77,6 +77,7 @@ rust-my-claude — Claude Code powerline statusline renderer
 USAGE:
     rust-my-claude                       Render statusline (JSON on stdin)
     rust-my-claude init                  Interactive theme picker + settings setup
+    rust-my-claude init <N>              Apply theme number N non-interactively
     rust-my-claude setup                 Alias for init
     rust-my-claude theme list            List bundled themes
     rust-my-claude theme preview <name>  Preview a theme with sample data
@@ -87,7 +88,22 @@ USAGE:
 
 // ─── cmd_init ────────────────────────────────────────────────────────────────
 
-fn cmd_init() -> i32 {
+fn cmd_init(args: &[String]) -> i32 {
+    let n = themes::THEMES.len();
+
+    // Non-interactive: `init <N>` applies theme number N (1-based) directly,
+    // skipping the (slow) render-every-theme preview and the prompt.
+    if let Some(arg) = args.first() {
+        match arg.parse::<usize>() {
+            Ok(num) if num >= 1 && num <= n => return apply_theme(num - 1),
+            _ => {
+                eprintln!("Invalid theme number: {arg:?}. Expected 1-{n}.");
+                eprintln!("Run 'rust-my-claude theme list' to see the numbered list.");
+                return 1;
+            }
+        }
+    }
+
     let sample = sample_input();
 
     println!("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
@@ -106,30 +122,33 @@ fn cmd_init() -> i32 {
         println!();
     }
 
-    let chosen = prompt_theme_choice(themes::THEMES.len());
-    match chosen {
+    match prompt_theme_choice(n) {
         None => {
             println!("Cancelled.");
-            return 0;
+            0
         }
-        Some(idx) => {
-            let theme = &themes::THEMES[idx];
-            if let Err(e) = write_config(theme.toml) {
-                eprintln!("Error writing config: {e}");
-                return 2;
-            }
-            if let Err(e) = patch_settings_json() {
-                eprintln!("Warning: could not patch settings.json: {e}");
-                // Non-fatal: config was written, just warn.
-            }
-            let cfg_path = config::resolve_path();
-            println!();
-            println!("Theme '{}' applied.", theme.name);
-            println!("Config written to: {}", cfg_path.display());
-            println!();
-            println!("Restart Claude Code to see the updated statusline.");
-        }
+        Some(idx) => apply_theme(idx),
     }
+}
+
+/// Apply the theme at `idx` (0-based): write the config and patch settings.json.
+/// Shared by the interactive picker and the non-interactive `init <N>` path.
+fn apply_theme(idx: usize) -> i32 {
+    let theme = &themes::THEMES[idx];
+    if let Err(e) = write_config(theme.toml) {
+        eprintln!("Error writing config: {e}");
+        return 2;
+    }
+    if let Err(e) = patch_settings_json() {
+        eprintln!("Warning: could not patch settings.json: {e}");
+        // Non-fatal: config was written, just warn.
+    }
+    let cfg_path = config::resolve_path();
+    println!();
+    println!("Theme '{}' applied.", theme.name);
+    println!("Config written to: {}", cfg_path.display());
+    println!();
+    println!("Restart Claude Code to see the updated statusline.");
     0
 }
 

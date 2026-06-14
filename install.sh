@@ -1,29 +1,40 @@
 #!/usr/bin/env bash
-# install.sh — install rust-my-claude, then run its interactive theme picker.
+# install.sh — install rust-my-claude, then set up a theme.
 #
 #   --bin       (default) download the prebuilt binary — no Rust toolchain needed
 #   --compile   clone (if needed) and compile from source with cargo
+#   <N>         apply theme number N directly (skip the interactive picker)
+#
+# With no number, the installer launches the interactive theme picker, which
+# renders every bundled theme (a few seconds). Pass a config number to skip
+# straight to a known theme — browse them in docs/THEMES.md or via
+# `rust-my-claude theme list`.
 #
 # Quick install (no clone required):
 #   curl -fsSL https://raw.githubusercontent.com/edTheGuy00/rust-my-claude/main/install.sh | bash
 #   curl -fsSL https://raw.githubusercontent.com/edTheGuy00/rust-my-claude/main/install.sh | bash -s -- --compile
+#   curl -fsSL https://raw.githubusercontent.com/edTheGuy00/rust-my-claude/main/install.sh | bash -s -- 140
 set -euo pipefail
 
 REPO="edTheGuy00/rust-my-claude"
 INSTALL_DIR="${HOME}/.local/bin"
 BINARY_NAME="rust-my-claude"
 MODE="bin"
+THEME_NUM=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --bin)     MODE="bin"; shift ;;
     --compile) MODE="compile"; shift ;;
+    [0-9]*)    THEME_NUM="$1"; shift ;;
     -h|--help)
-      echo "Usage: install.sh [--bin | --compile]"
+      echo "Usage: install.sh [--bin | --compile] [N]"
       echo "  --bin       Download the prebuilt binary (default; no Rust needed)"
       echo "  --compile   Clone and compile from source (requires Rust/cargo)"
+      echo "  N           Apply theme number N directly (skip the picker)."
+      echo "              See docs/THEMES.md or 'rust-my-claude theme list'."
       exit 0 ;;
-    *) echo "Unknown option: $1 (use --bin or --compile)"; exit 1 ;;
+    *) echo "Unknown option: $1 (use --bin, --compile, or a theme number)"; exit 1 ;;
   esac
 done
 
@@ -100,8 +111,14 @@ if ! echo "$PATH" | tr ':' '\n' | grep -qx "${INSTALL_DIR}"; then
   echo "   export PATH=\"${INSTALL_DIR}:\$PATH\""
 fi
 
-# ── hand off to the theme picker (writes config + patches settings.json) ──────
+# ── set up the theme (writes config + patches settings.json) ──────────────────
 echo ""
-echo "Launching theme picker…"
-echo ""
-"${BINARY_PATH}" init
+if [[ -n "${THEME_NUM}" ]]; then
+  echo "Applying theme #${THEME_NUM}…"
+  echo ""
+  "${BINARY_PATH}" init "${THEME_NUM}"
+else
+  echo "Launching theme picker…"
+  echo ""
+  "${BINARY_PATH}" init
+fi

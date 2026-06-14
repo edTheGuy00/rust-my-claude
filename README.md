@@ -1,6 +1,6 @@
 # rust-my-claude
 
-A fast, themeable **status line for [Claude Code](https://docs.claude.com/en/docs/claude-code)**, written in pure Rust. Zero npm / node / jq — a single ~430 KB binary that reads Claude Code's session JSON on stdin and prints a colored, Powerline-style status line.
+A fast, themeable **status line for [Claude Code](https://docs.claude.com/en/docs/claude-code)**, written in pure Rust. Zero npm / node / jq — a single ~600 KB binary (no runtime dependencies) that reads Claude Code's session JSON on stdin and prints a colored, Powerline-style status line.
 
 Inspired by [oh-my-posh](https://ohmyposh.dev) and [oh-my-claude](https://github.com/ssenart/oh-my-claude). Ships with **178 bundled themes** and a fully TOML-configurable component system.
 
@@ -11,7 +11,42 @@ Inspired by [oh-my-posh](https://ohmyposh.dev) and [oh-my-claude](https://github
 
 ---
 
+## Gallery
+
+A handful of the 178 bundled themes, rendered with `theme preview`:
+
+**`powerline`** — the default, two lines, classic Powerline chain.
+
+![powerline theme](docs/screenshots/powerline.png)
+
+**`tokyonight`** — a popular palette port.
+
+![tokyonight theme](docs/screenshots/tokyonight.png)
+
+**`bubbles`** — each segment a floating rounded pill (`diamond` separator).
+
+![bubbles theme](docs/screenshots/bubbles.png)
+
+**`flame`** — flame-shaped Powerline dividers.
+
+![flame theme](docs/screenshots/flame.png)
+
+**`loaded-gruvbox`** — everything on one line: model · context · 5h · 7d · cost.
+
+![loaded-gruvbox theme](docs/screenshots/loaded-gruvbox.png)
+
+**`minimal`** — ASCII-safe `plain` style, no Nerd Font required (gauges render as `[####----]`).
+
+![minimal theme](docs/screenshots/minimal.png)
+
+**→ See [`docs/THEMES.md`](docs/THEMES.md) for a numbered preview of all 178 themes.** Each theme's number is its *config number* — apply it directly with `install.sh <N>` or `rust-my-claude init <N>` (no need to scroll the interactive picker).
+
+> Browse them in your terminal with `rust-my-claude theme list`, and preview any one live with `rust-my-claude theme preview <name>`.
+
+---
+
 ## Contents
+- [Gallery](#gallery)
 - [Prerequisites](#prerequisites)
 - [Install](#install)
 - [How it works](#how-it-works)
@@ -53,7 +88,7 @@ Then set the font in your terminal's settings (e.g. *Hack Nerd Font*, *JetBrains
 
 ## Install
 
-The installer downloads or builds the binary, then launches an interactive **theme picker** that writes your config and wires up Claude Code's `settings.json` (backing up any existing one).
+The installer downloads or builds the binary, then launches an interactive **theme picker** that writes your config and wires up Claude Code's `settings.json` (backing up any existing one). Already know which theme you want? Pass its [number](docs/THEMES.md) to skip the picker — see [below](#pick-a-theme-up-front-skip-the-picker).
 
 ### Prebuilt binary (no Rust needed) — default
 ```bash
@@ -72,12 +107,22 @@ cd rust-my-claude
 bash install.sh --compile
 ```
 
-The installer has exactly **two modes**:
+The installer has two modes plus an optional **theme number**:
 
-| Flag | What it does |
+| Arg | What it does |
 |------|--------------|
 | `--bin` | (default) Downloads the prebuilt binary for your platform from GitHub Releases into `~/.local/bin`. No Rust toolchain required. |
 | `--compile` | Clones the repo (or builds your local checkout) with `cargo`, installs into `~/.local/bin`. Requires `cargo`. |
+| `<N>` | Apply theme number `N` directly and **skip the interactive picker** (which renders all 178 themes and takes a few seconds). Find the number in [`docs/THEMES.md`](docs/THEMES.md) or via `rust-my-claude theme list`. |
+
+### Pick a theme up front (skip the picker)
+Browse [`docs/THEMES.md`](docs/THEMES.md), find the number you want, and pass it:
+```bash
+# prebuilt binary, apply theme #140
+curl -fsSL https://raw.githubusercontent.com/edTheGuy00/rust-my-claude/main/install.sh | bash -s -- 140
+# compile from source, apply theme #16 (bubbles)
+curl -fsSL https://raw.githubusercontent.com/edTheGuy00/rust-my-claude/main/install.sh | bash -s -- --compile 16
+```
 
 > Make sure `~/.local/bin` is on your `PATH` (the installer warns if not).
 
@@ -108,11 +153,14 @@ Missing or invalid config falls back to the bundled `powerline` theme; empty or 
 ```
 rust-my-claude init                 # interactive: preview themes, pick one,
 rust-my-claude setup                #   write config + patch settings.json
-rust-my-claude theme list           # list all bundled themes
+rust-my-claude init <N>             # apply theme number N directly (no picker)
+rust-my-claude theme list           # list all bundled themes (in number order)
 rust-my-claude theme preview <name> # render a theme with sample data
 rust-my-claude theme set <name>     # write a theme to your config
 rust-my-claude config path          # print the resolved config file path
 ```
+
+> `init <N>` and `setup <N>` apply theme number `N` (1-based, matching [`docs/THEMES.md`](docs/THEMES.md) / `theme list`) without rendering the full picker.
 
 ---
 
@@ -250,7 +298,7 @@ Presence shows the component; it's additionally suppressed at runtime when its d
 
 ## Themes
 
-**178 bundled themes.** Browse with `rust-my-claude theme list`, preview with `theme preview <name>`, apply with `theme set <name>` or `init`.
+**178 bundled themes.** See **[`docs/THEMES.md`](docs/THEMES.md) for a numbered preview of every one.** Browse in the terminal with `rust-my-claude theme list`, preview with `theme preview <name>`, apply with `theme set <name>`, `init <N>`, or the `init` picker.
 
 | Family | Count | What |
 |--------|------:|------|
