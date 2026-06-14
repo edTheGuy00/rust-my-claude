@@ -1,0 +1,80 @@
+# rust-my-claude — dracula theme
+# Dracula palette: purple, pink, cyan, green on dark slate.
+
+# ── Global look ────────────────────────────────────────────────
+[style]
+separator           = "rounded"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+cap_left            = ""
+cap_right           = ""
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 141
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 236
+bg    = 212
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 236
+# bg is dynamic: clean=84 (green), staged=35, dirty/untracked=178
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 231
+bg    = 61
+
+[vim]
+line  = 1
+order = 4
+icon  = ""
+fg    = 231
+bg    = 91
+
+[thinking]
+line  = 1
+order = 5
+icon  = ""
+fg    = 236
+bg    = 117
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 141
+track  = 54
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 236
+bg     = 215
+format = "{cost:.4} · {duration}"

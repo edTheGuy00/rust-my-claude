@@ -1,0 +1,69 @@
+# rust-my-claude — matrix theme
+# Monochrome green-on-black; plain separators, no pill backgrounds.
+
+# ── Global look ────────────────────────────────────────────────
+[style]
+separator           = "plain"
+default_fg          = 46
+default_bg          = 0
+
+# ── LINE 1: where am I, who am I ───────────────────────────────
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 46
+
+[model]
+line  = 1
+order = 1
+icon  = ""
+fg    = 40
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 28
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 40
+
+[vim]
+line  = 1
+order = 4
+icon  = ""
+fg    = 22
+
+[thinking]
+line  = 1
+order = 5
+icon  = ""
+fg    = 28
+
+# ── LINE 2: budgets & cost ─────────────────────────────────────
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 46
+bg     = 22
+track  = 0
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+fg    = 40
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 28
+format = "{cost:.4} · {duration}"

@@ -42,6 +42,102 @@ pub static THEMES: &[Theme] = &[
             "/themes/nord.toml"
         )),
     },
+    Theme {
+        name: "agnoster",
+        description: "Classic agnoster powerline — blue/cyan/green/red segments",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/agnoster.toml"
+        )),
+    },
+    Theme {
+        name: "dracula",
+        description: "Dracula — purple, pink, cyan, green on dark slate",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/dracula.toml"
+        )),
+    },
+    Theme {
+        name: "gruvbox",
+        description: "Gruvbox — warm retro orange/yellow/aqua on dark brown",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/gruvbox.toml"
+        )),
+    },
+    Theme {
+        name: "tokyonight",
+        description: "Tokyo Night — deep blue/purple/cyan night palette",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/tokyonight.toml"
+        )),
+    },
+    Theme {
+        name: "catppuccin",
+        description: "Catppuccin Mocha — soft pastel mauve/pink/teal/green",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/catppuccin.toml"
+        )),
+    },
+    Theme {
+        name: "solarized-dark",
+        description: "Solarized Dark — base03 with yellow/blue/cyan accents",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/solarized-dark.toml"
+        )),
+    },
+    Theme {
+        name: "solarized-light",
+        description: "Solarized Light — light parchment bg, dark text",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/solarized-light.toml"
+        )),
+    },
+    Theme {
+        name: "monokai",
+        description: "Monokai — vivid green/pink/orange/cyan on charcoal",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/monokai.toml"
+        )),
+    },
+    Theme {
+        name: "onedark",
+        description: "One Dark — Atom-style blue/green/red/purple",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/onedark.toml"
+        )),
+    },
+    Theme {
+        name: "rose-pine",
+        description: "Rosé Pine — muted rose/gold/pine/foam",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/rose-pine.toml"
+        )),
+    },
+    Theme {
+        name: "cyberpunk",
+        description: "Cyberpunk — neon magenta + cyan, maximum contrast",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/cyberpunk.toml"
+        )),
+    },
+    Theme {
+        name: "matrix",
+        description: "Matrix — monochrome green-on-black, plain separators",
+        toml: include_str!(concat!(
+            env!("CARGO_MANIFEST_DIR"),
+            "/themes/matrix.toml"
+        )),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).
