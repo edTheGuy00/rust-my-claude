@@ -138,6 +138,36 @@ pub static THEMES: &[Theme] = &[
             "/themes/matrix.toml"
         )),
     },
+    Theme {
+        name: "bubbles",
+        description: "Floating rounded bubbles (diamond style), colourful backgrounds",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/bubbles.toml")),
+    },
+    Theme {
+        name: "chips",
+        description: "Floating chips on a dark base, coloured labels (diamond style)",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/chips.toml")),
+    },
+    Theme {
+        name: "cert",
+        description: "Floating segments with slanted ice caps (diamond style)",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/cert.toml")),
+    },
+    Theme {
+        name: "flame",
+        description: "Connected chain with flame-shaped dividers, ember palette",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/flame.toml")),
+    },
+    Theme {
+        name: "slant",
+        description: "Connected chain with angled/slanted dividers, cool palette",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/slant.toml")),
+    },
+    Theme {
+        name: "emodipt",
+        description: "Minimalist plain text, no backgrounds (transparent prompt)",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/emodipt.toml")),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).

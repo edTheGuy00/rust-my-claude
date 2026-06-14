@@ -30,6 +30,10 @@ pub struct Style {
     /// `"rounded"` = current look: rounded end-caps + `` dividers.
     /// `"powerline"` = same but no end-caps (flush edges).
     /// `"plain"` = no glyphs, space-separated, bg fills replaced by text `[##--]`.
+    /// `"diamond"` (aliases `"bubbles"`, `"chips"`) = each segment is its own
+    /// floating shape wrapped in `cap_left`/`cap_right` (round = bubbles; slant or
+    /// flame caps give other shapes). `powerline_divider` is also configurable for
+    /// slant/flame connected looks in `"powerline"` mode.
     pub separator: String,
     /// Fallback text color for any component that omits `fg`.
     pub default_fg: u8,

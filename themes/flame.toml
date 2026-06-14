@@ -1,0 +1,60 @@
+# rust-my-claude — flame theme
+# Connected powerline chain using a flame-shaped divider. Warm ember palette.
+
+[style]
+separator           = "powerline"
+default_fg          = 231
+default_bg          = 130
+gauge_red_shift     = true
+gauge_red_threshold = 60
+powerline_divider   = ""
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 88
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 124
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 235
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 235
+bg    = 130
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 166
+track  = 52
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 231
+bg     = 94
+format = "{cost:.4} · {duration}"

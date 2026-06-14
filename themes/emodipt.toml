@@ -1,0 +1,40 @@
+# rust-my-claude — emodipt theme
+# Plain style: no backgrounds or separators, just colour-coded icons + text.
+# A minimalist, transparent prompt look.
+
+[style]
+separator           = "plain"
+default_fg          = 252
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 75
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 176
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 179
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 141
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 215
+format = "{cost:.4} · {duration}"

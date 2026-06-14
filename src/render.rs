@@ -175,9 +175,28 @@ pub fn render_line(pills: &[Pill], style: &Style) -> String {
     }
     match style.separator.as_str() {
         "plain" => render_plain(pills),
+        "diamond" | "bubbles" | "chips" => render_diamond(pills, style),
         "powerline" => render_powerline(pills, style, false),
         _ => render_powerline(pills, style, true), // "rounded" and default
     }
+}
+
+/// Diamond / bubble / chip mode: each pill is a self-contained shape wrapped in
+/// its own leading + trailing cap (`cap_left`/`cap_right`), drawn in the pill's
+/// own colour on the terminal background. Pills float, separated by a space.
+/// Round caps (`` / ``) give bubbles; slant (`` / ``) or flame
+/// (`` / ``) caps give other shapes — all driven by the theme's cap glyphs.
+fn render_diamond(pills: &[Pill], style: &Style) -> String {
+    let cap_l: char = style.cap_left.chars().next().unwrap_or('\u{e0b6}');
+    let cap_r: char = style.cap_right.chars().next().unwrap_or('\u{e0b4}');
+    let mut parts: Vec<String> = Vec::with_capacity(pills.len());
+    for pill in pills {
+        let (lead, body, trail) = pill.body();
+        parts.push(format!(
+            "\x1b[38;5;{lead}m{cap_l}{body}{RESET}\x1b[38;5;{trail}m{cap_r}{RESET}"
+        ));
+    }
+    parts.join(" ")
 }
 
 /// Rounded caps + `` dividers (current look). `caps` controls whether

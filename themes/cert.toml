@@ -1,0 +1,55 @@
+# rust-my-claude — cert theme
+# Diamond style with slanted "ice" caps: floating segments with angled edges.
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 29
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 67
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 231
+bg    = 132
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 60
+track  = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 231
+bg     = 95
+format = "{cost:.4} · {duration}"

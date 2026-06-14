@@ -1,0 +1,62 @@
+# rust-my-claude — bubbles theme
+# Diamond style: each segment is its own floating rounded bubble (round caps,
+# gaps between). Colourful per-segment backgrounds.
+
+[style]
+separator           = "diamond"
+default_fg          = 231
+default_bg          = 236
+gauge_red_shift     = true
+gauge_red_threshold = 60
+cap_left            = ""
+cap_right           = ""
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 231
+bg    = 24
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 231
+bg    = 90
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 235
+
+[repo]
+line  = 1
+order = 3
+icon  = ""
+fg    = 250
+bg    = 238
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 231
+bg     = 99
+track  = 54
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line   = 2
+order  = 2
+icon   = ""
+fg     = 231
+bg     = 94
+format = "{cost:.4} · {duration}"
