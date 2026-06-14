@@ -1,20 +1,25 @@
 #!/usr/bin/env bash
-# install.sh — build & install rust-my-claude (pure Rust, no npm/node/jq needed)
+# install.sh — build & install the rust-my-claude binary, then run its
+# interactive theme picker. All settings.json / config handling lives in the
+# `rust-my-claude init` CLI; this script only bootstraps the binary.
 # Usage:  bash install.sh
 #         bash install.sh --dir ~/.local/bin   # custom install dir
+#         bash install.sh --no-init            # install binary only, skip picker
 set -euo pipefail
 
 INSTALL_DIR="${HOME}/.local/bin"
-SETTINGS_FILE="${HOME}/.claude/settings.json"
 BINARY_NAME="rust-my-claude"
+RUN_INIT=1
 
 # ── parse args ────────────────────────────────────────────────────────────────
 while [[ $# -gt 0 ]]; do
   case $1 in
     -d|--dir) INSTALL_DIR="$2"; shift 2 ;;
+    --no-init) RUN_INIT=0; shift ;;
     -h|--help)
-      echo "Usage: bash install.sh [--dir DIR]"
+      echo "Usage: bash install.sh [--dir DIR] [--no-init]"
       echo "  --dir DIR   Install binary to DIR (default: ~/.local/bin)"
+      echo "  --no-init   Install the binary only; skip the theme picker"
       exit 0 ;;
     *) echo "Unknown option: $1"; exit 1 ;;
   esac
@@ -31,27 +36,23 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 
 # ── check Rust ────────────────────────────────────────────────────────────────
-if ! command -v cargo &>/dev/null; then
-  die "cargo not found. Install Rust from https://rustup.rs/ then re-run."
-fi
-RUST_VERSION=$(rustc --version | awk '{print $2}')
-ok "Rust ${RUST_VERSION}"
+command -v cargo &>/dev/null || die "cargo not found. Install Rust from https://rustup.rs/ then re-run."
+ok "Rust $(rustc --version | awk '{print $2}')"
 
 # ── build ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo ""
 echo "Building release binary…"
-cd "${SCRIPT_DIR}"
 # Pin the target dir so the copy below works regardless of any global
 # CARGO_TARGET_DIR / ~/.cargo/config.toml target-dir override.
-cargo build --release --quiet --target-dir "${SCRIPT_DIR}/target"
+cargo build --release --quiet --manifest-path "${SCRIPT_DIR}/Cargo.toml" --target-dir "${SCRIPT_DIR}/target"
 ok "Build complete"
 
 # ── install binary ────────────────────────────────────────────────────────────
 mkdir -p "${INSTALL_DIR}"
-cp "${SCRIPT_DIR}/target/release/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
-chmod +x "${INSTALL_DIR}/${BINARY_NAME}"
-ok "Binary installed to ${INSTALL_DIR}/${BINARY_NAME}"
+BINARY_PATH="${INSTALL_DIR}/${BINARY_NAME}"
+install -m 755 "${SCRIPT_DIR}/target/release/${BINARY_NAME}" "${BINARY_PATH}"
+ok "Binary installed to ${BINARY_PATH}"
 
 # ── check PATH ────────────────────────────────────────────────────────────────
 if ! echo "$PATH" | tr ':' '\n' | grep -qx "${INSTALL_DIR}"; then
@@ -60,54 +61,12 @@ if ! echo "$PATH" | tr ':' '\n' | grep -qx "${INSTALL_DIR}"; then
   echo "   export PATH=\"${INSTALL_DIR}:\$PATH\""
 fi
 
-# ── update ~/.claude/settings.json ───────────────────────────────────────────
-BINARY_PATH="${INSTALL_DIR}/${BINARY_NAME}"
+# ── hand off to the theme picker ──────────────────────────────────────────────
 echo ""
-echo "Updating Claude Code settings…"
-
-mkdir -p "$(dirname "${SETTINGS_FILE}")"
-
-if [[ -f "${SETTINGS_FILE}" ]]; then
-  # Back up existing settings
-  BACKUP="${SETTINGS_FILE}.backup.$(date +%Y%m%d_%H%M%S)"
-  cp "${SETTINGS_FILE}" "${BACKUP}"
-  ok "Backed up settings → $(basename "${BACKUP}")"
-
-  # Patch with python3 (universally available, no jq needed)
-  python3 - "${SETTINGS_FILE}" "${BINARY_PATH}" << 'PY'
-import json, sys
-path, cmd = sys.argv[1], sys.argv[2]
-with open(path) as f:
-    cfg = json.load(f)
-cfg.setdefault("statusLine", {}).update({"type": "command", "command": cmd, "padding": 0})
-with open(path, "w") as f:
-    json.dump(cfg, f, indent=2)
-    f.write("\n")
-PY
-  ok "settings.json updated"
+if [[ "${RUN_INIT}" -eq 1 ]]; then
+  echo "Launching theme picker…"
+  echo ""
+  "${BINARY_PATH}" init
 else
-  # Create minimal settings
-  cat > "${SETTINGS_FILE}" << JSON
-{
-  "statusLine": {
-    "type": "command",
-    "command": "${BINARY_PATH}",
-    "padding": 0
-  }
-}
-JSON
-  ok "settings.json created"
+  ok "Binary installed. Run '${BINARY_NAME} init' to pick a theme and wire up Claude Code."
 fi
-
-echo ""
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "${GREEN}   Done!${NC}"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-echo "  Binary : ${BINARY_PATH}"
-echo "  Config : ${SETTINGS_FILE}"
-echo ""
-echo "  Restart Claude Code to see the status line."
-echo "  To test manually:"
-echo '  echo '"'"'{"model":{"display_name":"Sonnet"},"workspace":{"current_dir":"'"${HOME}"'"},"context_window":{"used_percentage":42}}'"'"" | ${BINARY_PATH}"
-echo ""

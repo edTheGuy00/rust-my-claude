@@ -1,0 +1,31 @@
+# rust-my-claude — minimal theme
+# ASCII-safe, plain separators, model + context + cost only.
+# No Nerd Font glyphs required.
+
+[style]
+separator           = "plain"
+default_fg          = 250
+default_bg          = 16
+gauge_red_shift     = true
+gauge_red_threshold = 80
+
+[model]
+line  = 1
+order = 0
+icon  = ""
+fg    = 51
+
+[context]
+line   = 2
+order  = 0
+icon   = ""
+gauge  = true
+fg     = 250
+format = "ctx {pct:.0}%"
+
+[cost]
+line   = 2
+order  = 1
+icon   = ""
+fg     = 240
+format = "${cost:.2}"

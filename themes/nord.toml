@@ -1,0 +1,52 @@
+# rust-my-claude — nord theme
+# Cool arctic palette, rounded pills.
+# Nord-inspired: 236/238 bases, 116/109/150 frost, 167 red accent.
+
+[style]
+separator           = "rounded"
+default_fg          = 231
+default_bg          = 238
+gauge_red_shift     = true
+gauge_red_threshold = 75
+
+[directory]
+line  = 1
+order = 0
+icon  = ""
+fg    = 236
+bg    = 109
+
+[model]
+line  = 1
+order = 1
+icon  = "✳"
+fg    = 236
+bg    = 116
+
+[git]
+line  = 1
+order = 2
+icon  = ""
+fg    = 236
+bg    = 150
+
+[context]
+line  = 2
+order = 0
+icon  = ""
+gauge = true
+fg    = 231
+bg    = 109
+track = 238
+
+[limits]
+line  = 2
+order = 1
+gauge = true
+
+[cost]
+line  = 2
+order = 2
+icon  = ""
+fg    = 231
+bg    = 167
