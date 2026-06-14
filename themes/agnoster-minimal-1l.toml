@@ -1,0 +1,20 @@
+# rust-my-claude — agnoster-minimal (one-line, minimal)
+# Auto-generated single-line variant of the 'agnoster-minimal' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 32
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 32
+gauge = true
+format = "{pct:.0}%"

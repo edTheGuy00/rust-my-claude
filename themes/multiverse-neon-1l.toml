@@ -1,0 +1,42 @@
+# rust-my-claude — multiverse-neon (one-line, compact)
+# Auto-generated single-line variant of the 'multiverse-neon' theme.
+
+[style]
+separator = "diamond"
+default_fg = 231
+default_bg = 23
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 77
+bg = 23
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 80
+bg = 23
+
+[git]
+line = 1
+order = 2
+icon = ""
+fg = 80
+bg = 23
+
+[context]
+line = 1
+order = 3
+icon = ""
+fg = 84
+bg = 23
+gauge = true
+track = 17
+format = "{pct:.0}%"

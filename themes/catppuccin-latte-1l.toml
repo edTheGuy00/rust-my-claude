@@ -1,0 +1,40 @@
+# rust-my-claude — catppuccin-latte (one-line, compact)
+# Auto-generated single-line variant of the 'catppuccin-latte' theme.
+
+[style]
+separator = "plain"
+default_fg = 59
+default_bg = 231
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 27
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 99
+
+[git]
+line = 1
+order = 2
+icon = ""
+fg = 176
+
+[context]
+line = 1
+order = 3
+icon = ""
+fg = 38
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line = 1
+order = 4
+icon = ""
+fg = 70
+format = "{cost:.4} · {duration}"

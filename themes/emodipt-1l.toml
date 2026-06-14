@@ -1,0 +1,39 @@
+# rust-my-claude — emodipt (one-line, compact)
+# Auto-generated single-line variant of the 'emodipt' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 75
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 176
+
+[git]
+line = 1
+order = 2
+icon = ""
+fg = 179
+
+[context]
+line = 1
+order = 3
+icon = ""
+fg = 141
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line = 1
+order = 4
+icon = ""
+fg = 215
+format = "{cost:.4} · {duration}"

@@ -1,0 +1,35 @@
+# rust-my-claude — material (one-line, compact)
+# Auto-generated single-line variant of the 'material' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+gauge_red_shift = true
+gauge_red_threshold = 70
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 73
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 176
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 84
+gauge = true
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 84
+format = "{cost:.4} · {duration}"

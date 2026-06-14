@@ -1,0 +1,19 @@
+# rust-my-claude — darkblood (one-line, minimal)
+# Auto-generated single-line variant of the 'darkblood' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 231
+
+[cost]
+line = 1
+order = 1
+icon = ""
+fg = 166
+format = "{cost:.4} · {duration}"

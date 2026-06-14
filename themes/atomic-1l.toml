@@ -1,0 +1,28 @@
+# rust-my-claude — atomic (one-line, minimal)
+# Auto-generated single-line variant of the 'atomic' theme.
+
+[style]
+separator = "diamond"
+default_fg = 231
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[git]
+line = 1
+order = 0
+icon = ""
+fg = 233
+bg = 226
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 233
+bg = 37
+gauge = true
+track = 23
+format = "{pct:.0}%"

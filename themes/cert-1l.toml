@@ -1,0 +1,28 @@
+# rust-my-claude — cert (one-line, minimal)
+# Auto-generated single-line variant of the 'cert' theme.
+
+[style]
+separator = "diamond"
+default_fg = 231
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 231
+bg = 67
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 231
+bg = 60
+gauge = true
+track = 23
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"

@@ -275,7 +275,14 @@ fn render_plain(pills: &[Pill]) -> String {
 /// `\n`, with a final `\n`. Empty lines are rendered as empty strings (the
 /// `println!` in main will still emit a blank line).
 pub fn render_lines(lines: &[Vec<Pill>], style: &Style) -> String {
-    let rendered: Vec<String> = lines.iter().map(|ps| render_line(ps, style)).collect();
+    // Skip lines with no pills so a single-line config renders as exactly one
+    // line (no trailing blank line), and a line whose components are all
+    // suppressed at runtime doesn't leave a gap.
+    let rendered: Vec<String> = lines
+        .iter()
+        .map(|ps| render_line(ps, style))
+        .filter(|s| !s.is_empty())
+        .collect();
     let mut out = rendered.join("\n");
     out.push('\n');
     out

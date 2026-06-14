@@ -1,0 +1,43 @@
+# rust-my-claude — wholespace (one-line, compact)
+# Auto-generated single-line variant of the 'wholespace' theme.
+
+[style]
+separator = "diamond"
+default_fg = 16
+default_bg = 231
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 231
+bg = 63
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 16
+bg = 43
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 231
+bg = 63
+gauge = true
+track = 17
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 16
+bg = 43
+format = "{cost:.4} · {duration}"

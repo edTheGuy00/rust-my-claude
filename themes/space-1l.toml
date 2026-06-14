@@ -1,0 +1,34 @@
+# rust-my-claude — space (one-line, compact)
+# Auto-generated single-line variant of the 'space' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+gauge_red_shift = true
+gauge_red_threshold = 60
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 119
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 99
+
+[git]
+line = 1
+order = 2
+icon = ""
+fg = 117
+
+[context]
+line = 1
+order = 3
+icon = ""
+fg = 99
+gauge = true
+format = "{pct:.0}%"

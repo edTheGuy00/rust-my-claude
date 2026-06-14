@@ -1,0 +1,32 @@
+# rust-my-claude — lambda (one-line, compact)
+# Auto-generated single-line variant of the 'lambda' theme.
+
+[style]
+separator = "plain"
+default_fg = 254
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 124
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 124
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 124
+gauge = true
+format = "{pct:.0}%"
+
+[limits]
+line = 1
+order = 3
+icon = ""
+fg = 254

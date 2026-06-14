@@ -1,0 +1,19 @@
+# rust-my-claude — smoothie (one-line, minimal)
+# Auto-generated single-line variant of the 'smoothie' theme.
+
+[style]
+separator = "plain"
+default_fg = 254
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 155
+
+[cost]
+line = 1
+order = 1
+icon = ""
+fg = 99
+format = "{cost:.4} · {duration}"

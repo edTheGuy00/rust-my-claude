@@ -1,0 +1,20 @@
+# rust-my-claude — tokyonight-storm (one-line, minimal)
+# Auto-generated single-line variant of the 'tokyonight-storm' theme.
+
+[style]
+separator = "plain"
+default_fg = 146
+gauge_red_shift = true
+gauge_red_threshold = 60
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 141
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 149

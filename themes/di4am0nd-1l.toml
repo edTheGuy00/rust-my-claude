@@ -1,0 +1,33 @@
+# rust-my-claude — di4am0nd (one-line, compact)
+# Auto-generated single-line variant of the 'di4am0nd' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 45
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 214
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 45
+gauge = true
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 214
+format = "{cost:.4} · {duration}"

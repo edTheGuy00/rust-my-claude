@@ -1,0 +1,35 @@
+# rust-my-claude — the-unnamed (one-line, compact)
+# Auto-generated single-line variant of the 'the-unnamed' theme.
+
+[style]
+separator = "plain"
+default_fg = 253
+gauge_red_shift = true
+gauge_red_threshold = 60
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 44
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 205
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 44
+gauge = true
+format = "{pct:.0}%"
+
+[limits]
+line = 1
+order = 3
+gauge = true
+icon = ""
+fg = 253

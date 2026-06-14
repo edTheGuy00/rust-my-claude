@@ -1,0 +1,43 @@
+# rust-my-claude — chips (one-line, compact)
+# Auto-generated single-line variant of the 'chips' theme.
+
+[style]
+separator = "diamond"
+default_fg = 252
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 75
+bg = 236
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 114
+bg = 236
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 252
+bg = 73
+gauge = true
+track = 236
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 215
+bg = 236
+format = "{cost:.4} · {duration}"

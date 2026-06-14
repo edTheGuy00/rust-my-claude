@@ -1,0 +1,27 @@
+# rust-my-claude — flame (one-line, minimal)
+# Auto-generated single-line variant of the 'flame' theme.
+
+[style]
+separator = "powerline"
+default_fg = 231
+default_bg = 130
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 231
+bg = 88
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 231
+bg = 166
+gauge = true
+track = 52
+format = "{pct:.0}%"

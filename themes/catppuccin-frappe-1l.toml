@@ -1,0 +1,26 @@
+# rust-my-claude — catppuccin-frappe (one-line, minimal)
+# Auto-generated single-line variant of the 'catppuccin-frappe' theme.
+
+[style]
+separator = "powerline"
+default_fg = 189
+default_bg = 237
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+cap_left = ""
+cap_right = ""
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 237
+bg = 111
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 237
+bg = 182

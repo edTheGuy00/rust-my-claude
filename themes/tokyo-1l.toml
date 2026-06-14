@@ -1,0 +1,33 @@
+# rust-my-claude — tokyo (one-line, compact)
+# Auto-generated single-line variant of the 'tokyo' theme.
+
+[style]
+separator = "plain"
+default_fg = 110
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 231
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 146
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 110
+gauge = true
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 203
+format = "{cost:.4} · {duration}"

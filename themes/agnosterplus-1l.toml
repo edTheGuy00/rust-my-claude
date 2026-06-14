@@ -1,0 +1,27 @@
+# rust-my-claude — agnosterplus (one-line, minimal)
+# Auto-generated single-line variant of the 'agnosterplus' theme.
+
+[style]
+separator = "powerline"
+default_fg = 235
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 235
+bg = 231
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 235
+bg = 32
+gauge = true
+track = 17
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"

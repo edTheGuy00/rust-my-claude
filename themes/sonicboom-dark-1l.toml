@@ -1,0 +1,40 @@
+# rust-my-claude — sonicboom-dark (one-line, compact)
+# Auto-generated single-line variant of the 'sonicboom-dark' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+default_bg = 235
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 80
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 80
+
+[git]
+line = 1
+order = 2
+icon = ""
+fg = 46
+
+[context]
+line = 1
+order = 3
+icon = ""
+fg = 80
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[cost]
+line = 1
+order = 4
+icon = ""
+fg = 196
+format = "{cost:.4} · {duration}"

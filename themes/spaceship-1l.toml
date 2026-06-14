@@ -1,0 +1,21 @@
+# rust-my-claude — spaceship (one-line, minimal)
+# Auto-generated single-line variant of the 'spaceship' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+default_bg = 0
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 218
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 120
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"

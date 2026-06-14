@@ -1,0 +1,40 @@
+# rust-my-claude — cyberpunk (one-line, compact)
+# Auto-generated single-line variant of the 'cyberpunk' theme.
+
+[style]
+separator = "powerline"
+default_fg = 231
+default_bg = 16
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 16
+bg = 201
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 16
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 231
+bg = 201
+gauge = true
+track = 53
+format = "{pct:.0}%"
+
+[limits]
+line = 1
+order = 3
+gauge = true
+icon = ""
+fg = 231

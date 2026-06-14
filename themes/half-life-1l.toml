@@ -1,0 +1,20 @@
+# rust-my-claude — half-life (one-line, minimal)
+# Auto-generated single-line variant of the 'half-life' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 97
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 81
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"

@@ -1,0 +1,25 @@
+# rust-my-claude — paradox (one-line, minimal)
+# Auto-generated single-line variant of the 'paradox' theme.
+
+[style]
+separator = "powerline"
+default_fg = 235
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 235
+bg = 223
+
+[cost]
+line = 1
+order = 1
+icon = ""
+fg = 235
+bg = 223
+format = "{cost:.4} · {duration}"

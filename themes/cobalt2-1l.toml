@@ -1,0 +1,28 @@
+# rust-my-claude — cobalt2 (one-line, minimal)
+# Auto-generated single-line variant of the 'cobalt2' theme.
+
+[style]
+separator = "diamond"
+default_fg = 231
+default_bg = 234
+gauge_red_shift = true
+gauge_red_threshold = 60
+cap_left = ""
+cap_right = ""
+
+[git]
+line = 1
+order = 0
+icon = ""
+fg = 232
+bg = 220
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 232
+bg = 26
+gauge = true
+track = 18
+format = "{pct:.0}%"

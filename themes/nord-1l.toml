@@ -1,0 +1,26 @@
+# rust-my-claude — nord (one-line, minimal)
+# Auto-generated single-line variant of the 'nord' theme.
+
+[style]
+separator = "rounded"
+default_fg = 231
+default_bg = 238
+gauge_red_shift = true
+gauge_red_threshold = 75
+
+[git]
+line = 1
+order = 0
+icon = ""
+fg = 236
+bg = 150
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 231
+bg = 109
+gauge = true
+track = 238
+format = "{pct:.0}%"

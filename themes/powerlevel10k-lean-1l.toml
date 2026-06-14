@@ -1,0 +1,18 @@
+# rust-my-claude — powerlevel10k-lean (one-line, minimal)
+# Auto-generated single-line variant of the 'powerlevel10k-lean' theme.
+
+[style]
+separator = "plain"
+default_fg = 231
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 81
+
+[model]
+line = 1
+order = 1
+icon = "✳"
+fg = 37

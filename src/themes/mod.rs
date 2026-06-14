@@ -388,6 +388,331 @@ pub static THEMES: &[Theme] = &[
         description: "Terminal-native plain style: no backgrounds, colour-coded text only — light-blue directory, white model, cyan git, yellow context and cost; clean monochrome minimalism.",
         toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/ys.toml")),
     },
+    Theme {
+        name: "agnoster-minimal-1l",
+        description: "agnoster-minimal one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/agnoster-minimal-1l.toml")),
+    },
+    Theme {
+        name: "agnoster-1l",
+        description: "agnoster one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/agnoster-1l.toml")),
+    },
+    Theme {
+        name: "agnosterplus-1l",
+        description: "agnosterplus one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/agnosterplus-1l.toml")),
+    },
+    Theme {
+        name: "aliens-1l",
+        description: "aliens one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/aliens-1l.toml")),
+    },
+    Theme {
+        name: "atomic-1l",
+        description: "atomic one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/atomic-1l.toml")),
+    },
+    Theme {
+        name: "blue-owl-1l",
+        description: "blue-owl one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/blue-owl-1l.toml")),
+    },
+    Theme {
+        name: "blueish-1l",
+        description: "blueish one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/blueish-1l.toml")),
+    },
+    Theme {
+        name: "bubbles-1l",
+        description: "bubbles one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/bubbles-1l.toml")),
+    },
+    Theme {
+        name: "catppuccin-frappe-1l",
+        description: "catppuccin-frappe one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/catppuccin-frappe-1l.toml")),
+    },
+    Theme {
+        name: "catppuccin-latte-1l",
+        description: "catppuccin-latte one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/catppuccin-latte-1l.toml")),
+    },
+    Theme {
+        name: "catppuccin-macchiato-1l",
+        description: "catppuccin-macchiato one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/catppuccin-macchiato-1l.toml")),
+    },
+    Theme {
+        name: "catppuccin-1l",
+        description: "catppuccin one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/catppuccin-1l.toml")),
+    },
+    Theme {
+        name: "cert-1l",
+        description: "cert one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/cert-1l.toml")),
+    },
+    Theme {
+        name: "chips-1l",
+        description: "chips one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/chips-1l.toml")),
+    },
+    Theme {
+        name: "cobalt2-1l",
+        description: "cobalt2 one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/cobalt2-1l.toml")),
+    },
+    Theme {
+        name: "cyberpunk-1l",
+        description: "cyberpunk one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/cyberpunk-1l.toml")),
+    },
+    Theme {
+        name: "darkblood-1l",
+        description: "darkblood one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/darkblood-1l.toml")),
+    },
+    Theme {
+        name: "di4am0nd-1l",
+        description: "di4am0nd one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/di4am0nd-1l.toml")),
+    },
+    Theme {
+        name: "dracula-1l",
+        description: "dracula one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/dracula-1l.toml")),
+    },
+    Theme {
+        name: "emodipt-1l",
+        description: "emodipt one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/emodipt-1l.toml")),
+    },
+    Theme {
+        name: "flame-1l",
+        description: "flame one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/flame-1l.toml")),
+    },
+    Theme {
+        name: "gruvbox-1l",
+        description: "gruvbox one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/gruvbox-1l.toml")),
+    },
+    Theme {
+        name: "half-life-1l",
+        description: "half-life one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/half-life-1l.toml")),
+    },
+    Theme {
+        name: "honukai-1l",
+        description: "honukai one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/honukai-1l.toml")),
+    },
+    Theme {
+        name: "jandedobbeleer-1l",
+        description: "jandedobbeleer one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/jandedobbeleer-1l.toml")),
+    },
+    Theme {
+        name: "lambda-1l",
+        description: "lambda one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/lambda-1l.toml")),
+    },
+    Theme {
+        name: "m365princess-1l",
+        description: "m365princess one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/m365princess-1l.toml")),
+    },
+    Theme {
+        name: "material-1l",
+        description: "material one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/material-1l.toml")),
+    },
+    Theme {
+        name: "matrix-1l",
+        description: "matrix one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/matrix-1l.toml")),
+    },
+    Theme {
+        name: "minimal-1l",
+        description: "minimal one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/minimal-1l.toml")),
+    },
+    Theme {
+        name: "monokai-1l",
+        description: "monokai one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/monokai-1l.toml")),
+    },
+    Theme {
+        name: "multiverse-neon-1l",
+        description: "multiverse-neon one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/multiverse-neon-1l.toml")),
+    },
+    Theme {
+        name: "neko-1l",
+        description: "neko one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/neko-1l.toml")),
+    },
+    Theme {
+        name: "night-owl-1l",
+        description: "night-owl one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/night-owl-1l.toml")),
+    },
+    Theme {
+        name: "nord-1l",
+        description: "nord one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/nord-1l.toml")),
+    },
+    Theme {
+        name: "onedark-1l",
+        description: "onedark one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/onedark-1l.toml")),
+    },
+    Theme {
+        name: "paradox-1l",
+        description: "paradox one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/paradox-1l.toml")),
+    },
+    Theme {
+        name: "plague-1l",
+        description: "plague one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/plague-1l.toml")),
+    },
+    Theme {
+        name: "powerlevel10k-lean-1l",
+        description: "powerlevel10k-lean one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/powerlevel10k-lean-1l.toml")),
+    },
+    Theme {
+        name: "powerlevel10k-modern-1l",
+        description: "powerlevel10k-modern one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/powerlevel10k-modern-1l.toml")),
+    },
+    Theme {
+        name: "powerlevel10k-rainbow-1l",
+        description: "powerlevel10k-rainbow one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/powerlevel10k-rainbow-1l.toml")),
+    },
+    Theme {
+        name: "powerline-1l",
+        description: "powerline one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/powerline-1l.toml")),
+    },
+    Theme {
+        name: "pure-1l",
+        description: "pure one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/pure-1l.toml")),
+    },
+    Theme {
+        name: "robbyrussell-1l",
+        description: "robbyrussell one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/robbyrussell-1l.toml")),
+    },
+    Theme {
+        name: "rose-pine-1l",
+        description: "rose-pine one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/rose-pine-1l.toml")),
+    },
+    Theme {
+        name: "slant-1l",
+        description: "slant one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/slant-1l.toml")),
+    },
+    Theme {
+        name: "smoothie-1l",
+        description: "smoothie one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/smoothie-1l.toml")),
+    },
+    Theme {
+        name: "solarized-dark-1l",
+        description: "solarized-dark one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/solarized-dark-1l.toml")),
+    },
+    Theme {
+        name: "solarized-light-1l",
+        description: "solarized-light one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/solarized-light-1l.toml")),
+    },
+    Theme {
+        name: "sonicboom-dark-1l",
+        description: "sonicboom-dark one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/sonicboom-dark-1l.toml")),
+    },
+    Theme {
+        name: "sorin-1l",
+        description: "sorin one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/sorin-1l.toml")),
+    },
+    Theme {
+        name: "space-1l",
+        description: "space one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/space-1l.toml")),
+    },
+    Theme {
+        name: "spaceship-1l",
+        description: "spaceship one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaceship-1l.toml")),
+    },
+    Theme {
+        name: "star-1l",
+        description: "star one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/star-1l.toml")),
+    },
+    Theme {
+        name: "takuya-1l",
+        description: "takuya one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/takuya-1l.toml")),
+    },
+    Theme {
+        name: "the-unnamed-1l",
+        description: "the-unnamed one-line (compact): directory, git, context, limits",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/the-unnamed-1l.toml")),
+    },
+    Theme {
+        name: "thecyberden-1l",
+        description: "thecyberden one-line (minimal): model, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/thecyberden-1l.toml")),
+    },
+    Theme {
+        name: "tokyo-1l",
+        description: "tokyo one-line (compact): directory, model, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/tokyo-1l.toml")),
+    },
+    Theme {
+        name: "tokyonight-storm-1l",
+        description: "tokyonight-storm one-line (minimal): directory, model",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/tokyonight-storm-1l.toml")),
+    },
+    Theme {
+        name: "tokyonight-1l",
+        description: "tokyonight one-line (compact): directory, model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/tokyonight-1l.toml")),
+    },
+    Theme {
+        name: "tonybaloney-1l",
+        description: "tonybaloney one-line (minimal): directory, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/tonybaloney-1l.toml")),
+    },
+    Theme {
+        name: "unicorn-1l",
+        description: "unicorn one-line (compact): directory, model, git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/unicorn-1l.toml")),
+    },
+    Theme {
+        name: "velvet-1l",
+        description: "velvet one-line (minimal): model, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/velvet-1l.toml")),
+    },
+    Theme {
+        name: "wholespace-1l",
+        description: "wholespace one-line (compact): model, git, context, cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/wholespace-1l.toml")),
+    },
+    Theme {
+        name: "ys-1l",
+        description: "ys one-line (minimal): git, context",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/ys-1l.toml")),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).

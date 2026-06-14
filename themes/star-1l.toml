@@ -1,0 +1,33 @@
+# rust-my-claude — star (one-line, compact)
+# Auto-generated single-line variant of the 'star' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 176
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 176
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 74
+gauge = true
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 108
+format = "{cost:.4} · {duration}"

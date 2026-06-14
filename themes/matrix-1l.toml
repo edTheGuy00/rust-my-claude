@@ -1,0 +1,19 @@
+# rust-my-claude — matrix (one-line, minimal)
+# Auto-generated single-line variant of the 'matrix' theme.
+
+[style]
+separator = "plain"
+default_fg = 46
+default_bg = 0
+
+[directory]
+line = 1
+order = 0
+icon = ""
+fg = 46
+
+[model]
+line = 1
+order = 1
+icon = ""
+fg = 40

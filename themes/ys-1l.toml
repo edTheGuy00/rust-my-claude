@@ -1,0 +1,20 @@
+# rust-my-claude — ys (one-line, minimal)
+# Auto-generated single-line variant of the 'ys' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[git]
+line = 1
+order = 0
+icon = ""
+fg = 51
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 229
+gauge = true
+format = "{pct:.0}%"

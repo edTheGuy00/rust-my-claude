@@ -1,0 +1,20 @@
+# rust-my-claude — neko (one-line, minimal)
+# Auto-generated single-line variant of the 'neko' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 176
+
+[context]
+line = 1
+order = 1
+icon = ""
+fg = 208
+gauge = true
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"

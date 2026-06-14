@@ -1,0 +1,33 @@
+# rust-my-claude — robbyrussell (one-line, compact)
+# Auto-generated single-line variant of the 'robbyrussell' theme.
+
+[style]
+separator = "plain"
+default_fg = 252
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 114
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 167
+
+[context]
+line = 1
+order = 2
+icon = ""
+fg = 221
+gauge = true
+format = "{pct:.0}% {in_tok}k"
+
+[cost]
+line = 1
+order = 3
+icon = ""
+fg = 114
+format = "{cost:.4} · {duration}"
