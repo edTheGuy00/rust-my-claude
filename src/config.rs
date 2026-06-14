@@ -151,6 +151,8 @@ const KNOWN_COMPONENTS: &[&str] = &[
     "cost",
     "duration",
     "limits",
+    "limit_5h",
+    "limit_7d",
     "vim",
     "thinking",
     "effort",

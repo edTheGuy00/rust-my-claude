@@ -833,6 +833,126 @@ pub static THEMES: &[Theme] = &[
         description: "Spaced pills (pl): model · context(tokens) · 5h · 7d",
         toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/spaced-latte.toml")),
     },
+    Theme {
+        name: "loaded",
+        description: "Loaded one-line (bubble): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded.toml")),
+    },
+    Theme {
+        name: "loaded-warm",
+        description: "Loaded one-line (slant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-warm.toml")),
+    },
+    Theme {
+        name: "loaded-cool",
+        description: "Loaded one-line (flame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-cool.toml")),
+    },
+    Theme {
+        name: "loaded-mono",
+        description: "Loaded one-line (pl): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-mono.toml")),
+    },
+    Theme {
+        name: "loaded-dracula",
+        description: "Loaded one-line (plslant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-dracula.toml")),
+    },
+    Theme {
+        name: "loaded-gruvbox",
+        description: "Loaded one-line (plflame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-gruvbox.toml")),
+    },
+    Theme {
+        name: "loaded-nord",
+        description: "Loaded one-line (round): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-nord.toml")),
+    },
+    Theme {
+        name: "loaded-tokyo",
+        description: "Loaded one-line (plain): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-tokyo.toml")),
+    },
+    Theme {
+        name: "loaded-catppuccin",
+        description: "Loaded one-line (bubble): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-catppuccin.toml")),
+    },
+    Theme {
+        name: "loaded-monokai",
+        description: "Loaded one-line (slant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-monokai.toml")),
+    },
+    Theme {
+        name: "loaded-onedark",
+        description: "Loaded one-line (flame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-onedark.toml")),
+    },
+    Theme {
+        name: "loaded-rosepine",
+        description: "Loaded one-line (pl): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-rosepine.toml")),
+    },
+    Theme {
+        name: "loaded-cobalt",
+        description: "Loaded one-line (plslant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-cobalt.toml")),
+    },
+    Theme {
+        name: "loaded-nightowl",
+        description: "Loaded one-line (plflame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-nightowl.toml")),
+    },
+    Theme {
+        name: "loaded-blueowl",
+        description: "Loaded one-line (round): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-blueowl.toml")),
+    },
+    Theme {
+        name: "loaded-atomic",
+        description: "Loaded one-line (plain): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-atomic.toml")),
+    },
+    Theme {
+        name: "loaded-m365",
+        description: "Loaded one-line (bubble): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-m365.toml")),
+    },
+    Theme {
+        name: "loaded-unicorn",
+        description: "Loaded one-line (slant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-unicorn.toml")),
+    },
+    Theme {
+        name: "loaded-material",
+        description: "Loaded one-line (flame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-material.toml")),
+    },
+    Theme {
+        name: "loaded-solarized",
+        description: "Loaded one-line (pl): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-solarized.toml")),
+    },
+    Theme {
+        name: "loaded-forest",
+        description: "Loaded one-line (plslant): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-forest.toml")),
+    },
+    Theme {
+        name: "loaded-neon",
+        description: "Loaded one-line (plflame): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-neon.toml")),
+    },
+    Theme {
+        name: "loaded-ember",
+        description: "Loaded one-line (round): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-ember.toml")),
+    },
+    Theme {
+        name: "loaded-latte",
+        description: "Loaded one-line (bubble): model · git · context(tokens) · 5h · 7d · cost",
+        toml: include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/themes/loaded-latte.toml")),
+    },
 ];
 
 /// Look up a theme by name (case-sensitive).

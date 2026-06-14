@@ -41,6 +41,8 @@ pub fn build(name: &str, cc: &ComponentConfig, input: &Input, style: &Style) -> 
         "cost" => build_cost(cc, input),
         "duration" => build_duration(cc, input),
         "limits" => build_limits(cc, input, style),
+        "limit_5h" => build_one_limit(cc, input, style, Window::FiveHour),
+        "limit_7d" => build_one_limit(cc, input, style, Window::SevenDay),
         "vim" => build_vim(cc, input),
         "thinking" => build_thinking(cc, input),
         "effort" => build_effort(cc, input),
@@ -242,46 +244,57 @@ fn build_duration(cc: &ComponentConfig, input: &Input) -> Vec<Pill> {
     vec![Pill::new(icon, text, fg, bg)]
 }
 
-fn build_limits(cc: &ComponentConfig, input: &Input, style: &Style) -> Vec<Pill> {
+/// Which rate-limit window to render.
+enum Window {
+    FiveHour,
+    SevenDay,
+}
+
+/// Render one rate-limit window into a single pill using `cc`'s style fields.
+/// Shared by `[limits]` (both windows, same colours) and the independent
+/// `[limit_5h]` / `[limit_7d]` components.
+fn build_one_limit(
+    cc: &ComponentConfig,
+    input: &Input,
+    style: &Style,
+    window: Window,
+) -> Vec<Pill> {
     let rl = match &input.rate_limits {
         Some(rl) => rl,
         None => return vec![],
     };
-    let mut pills = Vec::new();
-    // 5-hour window
-    if let Some(fh) = &rl.five_hour {
-        let pct = fh.used_percentage.unwrap_or(0.0);
-        let mut t = format!("5h {pct:.0}%");
-        if let Some(at) = fh.resets_at {
-            t.push_str(&format!(" \u{21ba}{}", fmt_countdown(at)));
-        }
-        let fg = cc.fg_or(231);
-        let bg = cc.bg_or(168);
-        let track = cc.track.unwrap_or(TRACK_5H);
-        let icon = cc.icon_or("\u{f06d}"); //
-        if cc.gauge_or(true) {
-            pills.push(Pill::gauge(icon, t, pct, bg, track, fg, style));
-        } else {
-            pills.push(Pill::new(icon, t, fg, bg));
+    let (w, label, def_bg, def_track, def_icon) = match window {
+        Window::FiveHour => (&rl.five_hour, "5h", 168, TRACK_5H, "\u{f06d}"), //
+        Window::SevenDay => (&rl.seven_day, "7d", 33, TRACK_7D, "\u{f073}"),  //
+    };
+    let w = match w {
+        Some(w) => w,
+        None => return vec![],
+    };
+    let pct = w.used_percentage.unwrap_or(0.0);
+    let mut t = format!("{label} {pct:.0}%");
+    if let Some(at) = w.resets_at {
+        match window {
+            Window::FiveHour => t.push_str(&format!(" \u{21ba}{}", fmt_countdown(at))),
+            Window::SevenDay => t.push_str(&format!(" {}", fmt_date(at))),
         }
     }
-    // 7-day window
-    if let Some(sd) = &rl.seven_day {
-        let pct = sd.used_percentage.unwrap_or(0.0);
-        let mut t = format!("7d {pct:.0}%");
-        if let Some(at) = sd.resets_at {
-            t.push_str(&format!(" {}", fmt_date(at)));
-        }
-        let fg = cc.fg_or(231);
-        let bg = cc.bg_or(33);
-        let track = cc.track.unwrap_or(TRACK_7D);
-        let icon = cc.icon_or("\u{f073}"); //
-        if cc.gauge_or(true) {
-            pills.push(Pill::gauge(icon, t, pct, bg, track, fg, style));
-        } else {
-            pills.push(Pill::new(icon, t, fg, bg));
-        }
-    }
+    let fg = cc.fg_or(231);
+    let bg = cc.bg_or(def_bg);
+    let track = cc.track.unwrap_or(def_track);
+    let icon = cc.icon_or(def_icon);
+    let pill = if cc.gauge_or(true) {
+        Pill::gauge(icon, t, pct, bg, track, fg, style)
+    } else {
+        Pill::new(icon, t, fg, bg)
+    };
+    vec![pill]
+}
+
+/// `[limits]` — both windows in one block (they share `cc`'s colours).
+fn build_limits(cc: &ComponentConfig, input: &Input, style: &Style) -> Vec<Pill> {
+    let mut pills = build_one_limit(cc, input, style, Window::FiveHour);
+    pills.extend(build_one_limit(cc, input, style, Window::SevenDay));
     pills
 }
 

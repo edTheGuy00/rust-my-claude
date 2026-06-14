@@ -1,0 +1,57 @@
+# rust-my-claude — loaded-rosepine theme
+# Loaded one-line (pl): model · git · context · 5h · 7d · cost.
+
+[style]
+separator = "powerline"
+default_fg = 231
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+powerline_divider = ""
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 231
+bg = 180
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 235
+
+[context]
+line = 1
+order = 2
+icon = ""
+gauge = true
+fg = 231
+bg = 140
+track = 54
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limit_5h]
+line = 1
+order = 3
+gauge = true
+fg = 231
+bg = 181
+track = 175
+
+[limit_7d]
+line = 1
+order = 4
+gauge = true
+fg = 231
+bg = 24
+track = 18
+
+[cost]
+line = 1
+order = 5
+icon = ""
+fg = 231
+bg = 180
+format = "{cost:.2f}"

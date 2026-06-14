@@ -1,0 +1,48 @@
+# rust-my-claude — loaded-tokyo theme
+# Loaded one-line (plain): model · git · context · 5h · 7d · cost.
+
+[style]
+separator = "plain"
+default_fg = 231
+default_bg = 236
+gauge_red_shift = true
+gauge_red_threshold = 60
+
+[model]
+line = 1
+order = 0
+icon = "✳"
+fg = 111
+
+[git]
+line = 1
+order = 1
+icon = ""
+fg = 114
+
+[context]
+line = 1
+order = 2
+icon = ""
+gauge = true
+fg = 111
+format = "{pct:.0}% · {in_tok}k/{ctx_size}k"
+
+[limit_5h]
+line = 1
+order = 3
+gauge = true
+fg = 141
+
+[limit_7d]
+line = 1
+order = 4
+gauge = true
+fg = 117
+
+[cost]
+line = 1
+order = 5
+icon = ""
+fg = 179
+format = "{cost:.2f}"
